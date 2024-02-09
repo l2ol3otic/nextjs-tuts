@@ -6,15 +6,13 @@ const Page = () => {
         {id: 2, title: 'grape'},
         {id: 3, title: 'banana'},
     ]    
-    const logger = (fruitName: string) => {
-        alert(`You just click ${fruitName}`)
-    }
+    const logger = (fruitName: string) => { alert(`You just click ${fruitName}`)}
     return <div className="p-12">
         {/* Title */}
         <h1 className="text-2xl">Hello world</h1>
         <hr className="my-4" />
         <ul className="text-yellow-400 list-disc">
-            { itemLists.map(item => <div>{item.title}</div> ) }
+            { itemLists.map((item,index) => <div key={index}>{item.title}</div> ) }
         </ul>
         <hr className="my-4" />
         {/* Table */}
@@ -27,9 +25,9 @@ const Page = () => {
                 </tr>
             </thead>
             <tbody>
-                { itemLists.map(item => {
+                { itemLists.map((item,index) => {
                     const {id , title} = item
-                    return <tr>
+                    return <tr key={index}>
                         <td className="border border-white p-2">{id}</td>
                         <td className="border border-white p-2">{title}</td>
                         <td className="border border-white p-2">
