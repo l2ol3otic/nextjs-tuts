@@ -14,7 +14,7 @@ const Page = () => {
     return <div className="p-12 w-4/5 m-auto">
         {/* Title */}
         <div className='font-bold mb-3'>Curent path name is <span className='text-yellow-500'>{pathname}</span></div>
-        <div className='font-bold mb-3'>Current param is <span className='text-yellow-500'>{searchParams.get('id')}</span></div>
+        <div className='font-bold mb-3'>Current param [id] is <span className='text-yellow-500'>{searchParams.get('id')}</span></div>
         <hr className="my-6" />
         <div className='font-bold mb-3'>Project example</div>
         <div className="grid grid-cols-5 gap-6">
