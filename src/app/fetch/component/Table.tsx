@@ -13,8 +13,9 @@ const Table = ({ zooState, region }:
     }) => {
     const [ zoolists, setAnimals ] = zooState
     const [ loadAnimal, setLoad ] = useState<Animal[]>([])
+    
+    // Fetch API /animal
     useEffect(() => {
-        
         (async () => {  
             const resp = await axios.get(`http://localhost:3000/api/animal`)
             const animalLists = resp.data
