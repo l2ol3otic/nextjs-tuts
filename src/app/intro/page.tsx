@@ -6,7 +6,9 @@ const Page = () => {
         {id: 2, title: 'grape'},
         {id: 3, title: 'banana'},
     ]    
-    const logger = (fruitName: string) => { alert(`You just click ${fruitName}`)}
+    const logger = (fruitName: string) => { 
+        alert(`You just click ${fruitName}`)
+    }
     return <div className="p-12">
         {/* Title */}
         <h1 className="text-2xl">Hello world</h1>
@@ -46,3 +48,4 @@ const Page = () => {
 }
 
 export default Page
+
