@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react'
+import { Toaster, toast } from 'react-hot-toast'
 
 interface Animal {
     id: number;
@@ -22,13 +23,18 @@ const animalLists: Animal[] = [
 const Page = () => {
     const [zoolists, setAnimals] = useState<Animal[]>([]);
     const addToZoo = (animal: Animal) => {
+        toast.success('Added to Zoo')
         setAnimals([ animal, ...zoolists ])
     }   
 
     const removeFromZoo = (removeAnimal: Animal) => {
+        toast(`Goodbye ! ${removeAnimal.name}`, {
+            icon: '👏',
+        });
         setAnimals( zoolists.filter(animal => animal.id != removeAnimal.id ))
     }   
     return <div className="p-12 w-4/5 m-auto">
+    <div><Toaster/></div>
     <h1 className="text-3xl font-bold mb-6 text-green-600">🇯🇲 🦓 🦒  Animal Zoo 🦒 🦓 🇯🇲</h1>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
         {zoolists.length > 0 ? 
