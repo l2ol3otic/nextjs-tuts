@@ -1,4 +1,5 @@
 // import { animalLists } from '../static'
+import { Toast, toast } from 'react-hot-toast'
 import { Animal } from '../interface'
 import { toast } from 'react-hot-toast'
 import { Button } from '../../../component/button'
