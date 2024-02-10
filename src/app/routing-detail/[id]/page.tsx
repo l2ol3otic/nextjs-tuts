@@ -21,8 +21,8 @@ const Page = () => {
                 </div>
                 <div className='col-span-2'>
                     <ul className='list-disc text-xl'>
-                        {Object.keys(findAnimal).map(key => {
-                            return <div>
+                        {Object.keys(findAnimal).map((key,index) => {
+                            return <div key={index}>
                                 <span className='text-yellow-500'>{key}: </span>
                                 {findAnimal[key]}
                             </div>
