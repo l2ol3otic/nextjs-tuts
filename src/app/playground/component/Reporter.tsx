@@ -1,9 +1,9 @@
+import { Toy } from '../interface'
 
-import { cartState } from '../store'
-import { useRecoilState } from 'recoil';
-
-export const Reporter = () => {
-    const [ cart ] = useRecoilState(cartState)
+export const Reporter = ({ cart }:{
+    cart: Toy[]
+}) => {
+    // const [ cart ] = useRecoilState(cartState)
     return <div className='flex w-4/5 mb-4'>
         <span>
             your cart have { cart.length } items 
