@@ -6,7 +6,6 @@ import { ToyTable } from './component/TableWithRecoil'
 import Total from './component/Total'
 import Facility, { FacilitySelector } from './component/Facility';
 import { Controller } from './component/Controller'
-import Facility, { SelectFacility } from './component/Facility'
 import { useRecoilState } from 'recoil';
 import { userState } from './store'
 

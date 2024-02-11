@@ -27,3 +27,8 @@ export const toyState = atom<Toy[]>({
   // default: toys,
   default: []
 });
+
+export const loadState = atom<boolean>({
+  key: 'loadState',
+  default: false
+});

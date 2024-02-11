@@ -70,7 +70,7 @@ const Table = ({ zooState, region }:
                         <button onClick={() => removeFromZoo(animal)} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Remove</button>
                     }
                     <span className='inline-block ml-2'></span>
-                    <Button action={() => router.push(`/routing-detail/${id}`) } text="Detail" />
+                    <Button action={() => router.push(`/routing-detail/${id}`) } text="Detail" color={2}/>
                 </td>
             </tr>
         })}
