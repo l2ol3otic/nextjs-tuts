@@ -17,7 +17,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <RecoilWrapper>
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <div>
+
+          </div>
+          {children}
+          </body>
       </RecoilWrapper>
     </html>
   );

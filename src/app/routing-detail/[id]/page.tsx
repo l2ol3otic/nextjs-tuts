@@ -29,7 +29,7 @@ const Page = () => {
                         })}
                     </ul>
                     <br />
-                    <Button action={() => router.push('/routing-detail') } text="Go Back" />
+                    <Button action={() => router.push('/routing-detail') } text="Go Back" color={2} />
                 </div>
             </div>
         </> }

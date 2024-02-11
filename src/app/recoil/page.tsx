@@ -4,12 +4,14 @@ import { Toaster } from 'react-hot-toast'
 import { Reporter } from './component/Reporter'
 import { ToyTable } from './component/TableWithRecoil'
 import Total from './component/Total'
+import Facility, { FacilitySelector } from './component/Facility';
 import { Controller } from './component/Controller'
 import { useRecoilState } from 'recoil';
 import { userState } from './store'
 
+
 const Page = () => {
-    const [ username ] = useRecoilState(userState)
+    const [username] = useRecoilState(userState)
     return <div className="w-screen h-screen flex flex-col items-center justify-center">
         <div><Toaster /></div>
         <div >this is playground</div>
@@ -18,7 +20,10 @@ const Page = () => {
         <Total />
         <ToyTable />
         <Controller />
-    </div> 
+        <br />
+        <Facility />
+        <FacilitySelector />
+    </div>
 }
 
 export default Page

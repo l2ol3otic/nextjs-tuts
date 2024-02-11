@@ -1,7 +1,7 @@
 'use client';
 
-import { 
-    useRouter, 
+import {
+    useRouter,
     usePathname,
     useSearchParams
 } from 'next/navigation'
@@ -18,14 +18,23 @@ const Page = () => {
         <hr className="my-6" />
         <div className='font-bold mb-3'>Project example</div>
         <div className="grid grid-cols-5 gap-6">
-            <Button text="intro" action={() => Router.push('/intro')}></Button>
-            <Button text="animal zoo" action={() => Router.push('/tailwind')}></Button>
-            <Button text="toasting" action={() => Router.push('/toasting')}></Button>
-            <Button text="refactor" action={() => Router.push('/refactoring')}></Button>
-            <Button text="pomodoro" action={() => Router.push('/pomodoro')}></Button>
+            <Button color={Math.floor(Math.random() * 5)} text="intro" action={() => Router.push('/intro')}></Button>
+            <Button color={Math.floor(Math.random() * 5)} text="animal zoo" action={() => Router.push('/tailwind')}></Button>
+            <Button color={Math.floor(Math.random() * 5)} text="toasting" action={() => Router.push('/toasting')}></Button>
+            <Button color={Math.floor(Math.random() * 5)} text="refactor" action={() => Router.push('/refactoring')}></Button>
+            <Button color={Math.floor(Math.random() * 5)} text="pomodoro" action={() => Router.push('/pomodoro')}></Button>
+
+        </div>
+        <div className='grid grid-cols-5 gap-6 mt-2 '>
+            <Button color={Math.floor(Math.random() * 5)} text="รีคอย" action={() => Router.push('/recoil')}></Button>
+            <Button color={Math.floor(Math.random() * 5)} text="เพลกราว" action={() => Router.push('/playground')}></Button>
+            <Button color={Math.floor(Math.random() * 5)} text="ฟายเบด" action={() => Router.push('/firebase')}></Button>
+            <Button color={Math.floor(Math.random() * 5)} text="เอสอีโอ" action={() => Router.push('/seo')}></Button>
+            <Button color={Math.floor(Math.random() * 5)} text="เฟด" action={() => Router.push('/fetch')}></Button>
+            <Button color={Math.floor(Math.random() * 5)} text="ฟอร์ม" action={() => Router.push('/from')}></Button>
         </div>
         <hr className="my-6" />
-        
+
     </div>
 }
 
