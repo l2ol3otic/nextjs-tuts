@@ -7,9 +7,15 @@ import { Toy } from '../app/form/interface'
 
 // PASTE YOUR FIREBASE CONFIG
 const firebaseConfig = {
-    apiKey: "XXX",
-    // auth......
-}
+  apiKey: "AIzaSyChWqJ16uPq4GZUja74AfZzjtdKK8hF6lU",
+  authDomain: "realtime-broker-sale.firebaseapp.com",
+  databaseURL: "https://realtime-broker-sale.firebaseio.com",
+  projectId: "realtime-broker-sale",
+  storageBucket: "realtime-broker-sale.appspot.com",
+  messagingSenderId: "278950718994",
+  appId: "1:278950718994:web:d08f34e442d069e823f2cb",
+  measurementId: "G-14DQ0RKVVG"
+};
 
 try {
   firebase.initializeApp(firebaseConfig);

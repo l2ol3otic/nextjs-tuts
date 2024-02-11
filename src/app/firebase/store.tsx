@@ -1,5 +1,6 @@
 import { atom } from 'recoil';
 import { Toy } from './interface'
+import { toys } from './static'
 
 export const userState = atom<string>({
     key: 'userState',
@@ -21,14 +22,8 @@ export const sortState = atom<string>({
     default: 'ascending'
 })
 
-export const facilityState = atom({
-  key: 'facilityState',
-  default: [
-    'toilet', 'restaurant', 'carpark'
-  ]
-})
-
-export const selectedFacilityState = atom<string>({
-  key: 'selectedFacilityState',
-  default: 'toilet'
-})
+export const toyState = atom<Toy[]>({
+  key: 'toyState',
+  // default: toys,
+  default: []
+});

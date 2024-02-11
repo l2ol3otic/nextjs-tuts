@@ -5,6 +5,7 @@ import { Reporter } from './component/Reporter'
 import { ToyTable } from './component/TableWithRecoil'
 import Total from './component/Total'
 import { Controller } from './component/Controller'
+import Facility, { SelectFacility } from './component/Facility'
 import { useRecoilState } from 'recoil';
 import { userState } from './store'
 
@@ -18,6 +19,9 @@ const Page = () => {
         <Total />
         <ToyTable />
         <Controller />
+        <br />
+        <Facility />
+        <SelectFacility />
     </div> 
 }
 

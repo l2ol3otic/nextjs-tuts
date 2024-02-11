@@ -12,8 +12,8 @@ const Total = ({ cart }:{
     cart: Toy[]
 }) => {
     return <div className='grid grid-cols-3 gap-5 w-4/5 '>
-    { cart.map(stuff => {
-        return <div className='bg-white rounded-xl shadow text-black p-4'>
+    { cart.map((stuff, index) => {
+        return <div key={index} className='bg-white rounded-xl shadow text-black p-4'>
             <div>{stuff.image} { stuff.name }</div>
             <span 
                 className='inline-block bg-red-500 rounded-lg text-xs text-white px-2'>
@@ -24,8 +24,6 @@ const Total = ({ cart }:{
     }) }
 </div>
 }
-
-
 
 const Page = () => {
     const [ username ] = useState('chin')
@@ -46,8 +44,6 @@ const Page = () => {
         
         <ToyTable sortBy={sortBy} cartState={cartState} genreState={genreState} />
 
-        
-        
         <div className='flex mt-3'>
             <h4>Sort by</h4>
             <button onClick={() => setSort('ascending')} className='px-4'>➡️ ascending</button>            
@@ -55,13 +51,11 @@ const Page = () => {
         </div>
         <div>
             <select className='text-black px-3 mt-4 rounded-lg' onChange={e => setCurrentGenre(e.target.value)} >
-                { genres.map(genre => {
-                    return <option className='text-black' value={genre}>{genre}</option>
+                { genres.map((genre,index) => {
+                    return <option key={index} className='text-black' value={genre}>{genre}</option>
                 }) }
             </select>
         </div>
-
-
     </div> 
 }
 

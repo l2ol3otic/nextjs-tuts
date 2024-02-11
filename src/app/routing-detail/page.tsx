@@ -9,10 +9,13 @@ import Titler from './component/Titler';
 import NoAnimalBanner from './component/BlankBanner';
 
 import { 
+    useRouter,
     useSearchParams
 } from 'next/navigation'
+import { Button } from '@/component/button'
 
 const Page = () => {
+    const router = useRouter()
     const searchParams = useSearchParams() // get current search query
     const region = searchParams.get('region')
     const zooState = useState<Animal[]>([]);
@@ -29,6 +32,13 @@ const Page = () => {
             <NoAnimalBanner />
         }
     </div>
+    
+    <div>
+        <Button color='red' action={() => router.push(`/routing-detail/region/earth`) } text="earth" />
+        <Button color='red' action={() => router.push(`/routing-detail/region/ocean`) } text="ocean" />
+        <Button color='red' action={() => router.push(`/routing-detail/region/sky`) } text="sky" />
+    </div>
+
     <Table zooState={zooState} region={region}  />
 </div>
 }
