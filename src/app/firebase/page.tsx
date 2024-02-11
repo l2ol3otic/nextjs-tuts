@@ -1,33 +1,35 @@
-import * as firebase from '../../method/firebase'
-import { Toy } from './interface'
+'use client';
 
-const mock: Toy = { 
-    id: 7, 
-    genre: 'lovely', 
-    name: 'ชิงช้าสวรรค์', 
-    price: 2000, 
-    image: '🥁' 
-}
+import { useEffect, useState } from 'react'
+import { Toaster } from 'react-hot-toast'
+import { Reporter } from './component/Reporter'
+import { ToyTable } from './component/TableWithRecoil'
+import Total from './component/Total'
+import { Controller } from './component/Controller'
+import Form from './component/Form'
+import { useRecoilState } from 'recoil';
+import { userState } from './store'
+
 
 const Page = () => {
-    const getAll = async () => {
-        return await firebase.getToy()
-    }
-    const getById = async () => {
-        return await firebase.getToyById(mock.id.toString())
-    }
-    const add = async () => {
-        await firebase.addNewToy(mock)    
-    }
-    const deleteToy = async () => {
-        await firebase.deleteToy(mock.id.toString())
-    }
-    const updateToy = async () => {
-        await firebase.updateToy
-    }
-    return <div>
-        firebase example
-    </div>
+    const [ username ] = useRecoilState(userState)
+    
+    return <div className="w-screen h-screen flex flex-col items-center justify-center">
+        <div><Toaster /></div>
+        <div >this is playground</div>
+        <div className='text-blue-400 text-3xl mb-5' >hello <span className='underline capitalize font-bold italic'>{username}</span>  👪</div>
+        <Reporter />
+        
+        <div className='grid grid-cols-2 gap-6'>
+            <div>
+                <Total />
+                <ToyTable />
+                <Controller />
+            </div>
+            <Form />
+        </div>
+        
+    </div> 
 }
 
 export default Page
