@@ -13,7 +13,7 @@ import { useRouter } from 'next/navigation';
 import {
     useSearchParams
 } from 'next/navigation'
-import { Button } from '@/component/button'
+
 
 const Page = () => {
     const router = useRouter()
